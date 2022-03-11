@@ -10,7 +10,12 @@
     "lint:css": "cross-env NODE_ENV=production stylelint \"./src/**/*.{css,sass,scss,vue}\" --quiet --fix"
   },
   "dependencies": {
-    "vue": "^3.2.26"
+    "bootstrap-icons": "^1.8.0",
+    "firebase": "^9.6.5",
+    "firebaseui": "^6.0.0",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.26",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.1",

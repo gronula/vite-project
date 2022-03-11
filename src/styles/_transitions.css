@@ -1,0 +1,55 @@
+@layer utilities {
+    .trs {
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        transition-duration: 0.2s;
+    }
+
+    .trs-slow {
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        transition-duration: 0.3s;
+    }
+}
+
+.fade,
+.fade-up,
+.fade-down,
+.fade-left,
+.fade-right {
+    &-enter-active,
+    &-leave-active {
+        pointer-events: none;
+    }
+
+    &-enter-from,
+    &-leave-to {
+        opacity: 0;
+    }
+}
+
+.fade-up {
+    &-enter-from,
+    &-leave-to {
+        transform: translate3d(0, 20px, 0);
+    }
+}
+
+.fade-down {
+    &-enter-from,
+    &-leave-to {
+        transform: translate3d(0, -20px, 0);
+    }
+}
+
+.fade-left {
+    &-enter-from,
+    &-leave-to {
+        transform: translate3d(20px, 0, 0);
+    }
+}
+
+.fade-right {
+    &-enter-from,
+    &-leave-to {
+        transform: translate3d(-20px, 0, 0);
+    }
+}

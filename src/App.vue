@@ -1,14 +1,21 @@
 <template>
-    <h1>App</h1>
+    <div class="app flex flex-col flex-grow">
+        <component :is="componentLayout" />
+    </div>
 </template>
 
-<script setup>
-</script>
+<script>
+import DefaultLayout from './layouts/DefaultLayout.vue';
 
-<style>
-html,
-body {
-    display: flex;
-    font-size: 12px;
-}
-</style>
+export default {
+    name: 'App',
+    components: {
+        DefaultLayout,
+    },
+    computed: {
+        componentLayout() {
+            return this.$route.meta.layout || DefaultLayout;
+        },
+    },
+};
+</script>

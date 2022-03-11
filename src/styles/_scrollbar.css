@@ -1,0 +1,67 @@
+@layer utilities {
+    .custom-scrollbar {
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            width: theme("width.4");
+            background-color: theme("colors.transparent");
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: theme("colors.transparent");
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: theme("colors.gray.900");
+            background-clip: content-box;
+            border: calc(theme("width.4") / 3) solid theme("colors.transparent");
+            border-radius: theme("width.4");
+
+            &:hover {
+                background-color: theme("colors.gray.500");
+            }
+
+            &:active {
+                background-color: theme("colors.gray.700");
+            }
+        }
+
+        &::-webkit-scrollbar-button,
+        &::-webkit-scrollbar-corner {
+            display: none;
+        }
+    }
+
+    .custom-scrollbar-light {
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            width: theme("width.4");
+            background-color: theme("colors.transparent");
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: theme("colors.transparent");
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: theme("colors.gray.100");
+            background-clip: content-box;
+            border: calc(theme("width.4") / 3) solid theme("colors.transparent");
+            border-radius: theme("width.4");
+
+            &:hover {
+                background-color: theme("colors.gray.500");
+            }
+
+            &:active {
+                background-color: theme("colors.gray.300");
+            }
+        }
+
+        &::-webkit-scrollbar-button,
+        &::-webkit-scrollbar-corner {
+            display: none;
+        }
+    }
+}
